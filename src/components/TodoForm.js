@@ -15,10 +15,15 @@ const TodoForm = (props) =>{
   const handleFormSubmission = (event) =>{
     event.preventDefault();
 
-    const newTodos = [...todos, todo];
-    setTodos(newTodos);
+    if(todo != ""){
+      const newTodos = [...todos, todo];
+      setTodos(newTodos);
 
-    setTodo("");
+      setTodo("");
+    }
+    else{
+      setTodo("")
+    }
   }
 
   const deleteTodo = (index) =>{

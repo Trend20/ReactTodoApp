@@ -5,13 +5,13 @@ const TodoItems = (props) =>{
 
   const {todos, deleteTodo} = props;
     return(
-      <div>
+      <div className="todo-list">
         <ul>
         {
           todos.map((item, index) =>(
               <div key={index}>
                 <li>{item}</li>
-                <span onClick={deleteTodo}>X</span>
+                <div onClick={deleteTodo}>X</div>
               </div>
           ))
         }
