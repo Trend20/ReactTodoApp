@@ -13,7 +13,6 @@ const TodoItems = (props) =>{
                 <li>{item}</li>
                 <span onClick={deleteTodo}>X</span>
               </div>
-
           ))
         }
         </ul>

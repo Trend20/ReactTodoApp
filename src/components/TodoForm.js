@@ -11,7 +11,6 @@ const TodoForm = (props) =>{
     setTodo(event.target.value)
   }
 
-
   // handle form submission
   const handleFormSubmission = (event) =>{
     event.preventDefault();
@@ -29,7 +28,7 @@ const TodoForm = (props) =>{
  }
 
   return(
-    <div>
+    <div className="todo-container">
       <h1>React Todo App</h1>
       <form onSubmit={handleFormSubmission}>
         <input type="text" 
