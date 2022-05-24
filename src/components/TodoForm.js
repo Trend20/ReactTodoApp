@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Search from "./Search";
 import TodoItems from "./TodoItems";
 
 const TodoForm = (props) =>{
@@ -43,6 +44,7 @@ const TodoForm = (props) =>{
         />
         <button type="submit">Add Todo</button>
       </form>
+      <Search todos={todos} />
       <TodoItems todos={todos} deleteTodo={deleteTodo} />
     </div>
   )
