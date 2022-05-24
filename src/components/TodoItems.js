@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 const TodoItems = (props) =>{
 
-  const {todos} = props;
-
-  const deleteTodo = (todo) =>{
-    
-  }
+  const {todos, deleteTodo} = props;
     return(
       <div>
         <ul>
         {
           todos.map((item, index) =>(
-              <li key={index}>{item}</li>
+              <div key={index}>
+                <li>{item}</li>
+                <span onClick={deleteTodo}>X</span>
+              </div>
+
           ))
         }
         </ul>

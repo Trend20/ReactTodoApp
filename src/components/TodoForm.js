@@ -20,8 +20,13 @@ const TodoForm = (props) =>{
     setTodos(newTodos);
 
     setTodo("");
-    // setTodos([]);
   }
+
+  const deleteTodo = (index) =>{
+    const remainingTodo = [...todos];
+    remainingTodo.splice(index, 1);
+    setTodos(remainingTodo);
+ }
 
   return(
     <div>
@@ -34,7 +39,7 @@ const TodoForm = (props) =>{
         />
         <button type="submit">Add Todo</button>
       </form>
-      <TodoItems todos={todos} />
+      <TodoItems todos={todos} deleteTodo={deleteTodo} />
     </div>
   )
 }
