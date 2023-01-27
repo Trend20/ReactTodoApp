@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Search from "./Search";
 import TodoItems from "./TodoItems";
 
-const TodoForm = (props) =>{
+const TodoList = (props) =>{
 
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([]);
@@ -16,7 +16,7 @@ const TodoForm = (props) =>{
   const handleFormSubmission = (event) =>{
     event.preventDefault();
 
-    if(todo != ""){
+    if(todo !== ""){
       const newTodos = [...todos, todo];
       setTodos(newTodos);
 
@@ -49,4 +49,4 @@ const TodoForm = (props) =>{
     </div>
   )
 }
-export default TodoForm;
+export default TodoList;
