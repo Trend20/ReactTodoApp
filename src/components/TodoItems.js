@@ -1,8 +1,7 @@
 import React from "react";
 
-
 const TodoItems = (props) =>{
-  const {todos, deleteTodo} = props
+  const {todos, deleteTodo} = props;
     return(
       <div className="todo-list">
         <ul>
